@@ -17,10 +17,10 @@ def welcome():
     asyncio._set_running_loop(loop)
     duet = sy.join_duet(loopback=True)
     return "Hello"
+
 @app.route("/home")
 def home():
     return render_template('home.html')
-
 
 @app.route("/about")
 def about():
