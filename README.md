@@ -1,7 +1,9 @@
 # pegasus-server
 
-Chat Applicaiton Extended with Federated Learning 
+Chat Application Extended with Federated Learning 
+
 Domain : Secured AI/ML
 
-to make contributions 
+
+To make contributions 
 First Fork the repository.
