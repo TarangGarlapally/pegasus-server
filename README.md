@@ -1,6 +1,6 @@
 # pegasus-server
 
-Chat Application Extended with Federated Learning 
+Server for Chat Application Extended with Federated Learning 
 
 Domain : Secured AI/ML
 
