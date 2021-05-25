@@ -57,64 +57,7 @@
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_9">
-            <item>
-             <widget class="QPushButton" name="JohnDoe">
-              <property name="styleSheet">
-               <string notr="true">background-color:#333399;color:#fff;font-size:20px;margin:15px 0px 15px 0px;padding:5px 0px 5px 0px;border:0px solid transparent;border-radius:5px</string>
-              </property>
-              <property name="text">
-               <string>John Doe</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <item>
-             <widget class="QPushButton" name="JaneDoe">
-              <property name="styleSheet">
-               <string notr="true">background-color:#333399;color:#fff;font-size:20px;margin:15px 0px 15px 0px;padding:5px 0px 5px 0px;border:0px solid transparent;border-radius:5px</string>
-              </property>
-              <property name="text">
-               <string>Jane Doe</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QPushButton" name="Jolly">
-              <property name="styleSheet">
-               <string notr="true">background-color:#333399;color:#fff;font-size:20px;margin:15px 0px 15px 0px;padding:5px 0px 5px 0px;border:0px solid transparent;border-radius:5px</string>
-              </property>
-              <property name="text">
-               <string>Jolly</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <widget class="QPushButton" name="Ram">
-              <property name="styleSheet">
-               <string notr="true">background-color:#333399;color:#fff;font-size:20px;margin:15px 0px 15px 0px;padding:5px 0px 5px 0px;border:0px solid transparent;border-radius:5px</string>
-              </property>
-              <property name="text">
-               <string>Ram</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
+         <layout class="QVBoxLayout" name="contactsList"/>
         </item>
         <item>
          <widget class="QPushButton" name="addButton">
@@ -153,7 +96,7 @@
          <string notr="true">font-size:30px;color:#fff;background-color:#333399;padding:5px 0px 5px 10px;margin-right:8px;</string>
         </property>
         <property name="text">
-         <string></string>
+         <string/>
         </property>
        </widget>
       </item>
