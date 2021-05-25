@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QGridLayout, QLabel, QLineEdit,QMainWindow,QPushButton, QScrollArea, QWidget, QVBoxLayout
-import sys
+import sys,time
 import image_rc, add_rc
 
 '''
@@ -21,6 +21,13 @@ def own_message_label(text,sent):
     else:
         label.setAlignment(Qt.AlignLeft)
     return label
+
+def own_push_button(text):
+    button=QPushButton(text)
+    button.setObjectName(text.replace(' ',''))
+    button.setStyleSheet("background-color:#333399;color:#fff;font-size:20px;margin:15px 0px 15px 0px;padding:5px 0px 5px 0px;border:0px solid transparent;border-radius:5px")
+    return button
+
 
 class add(QWidget):
     def __init__(self):
@@ -61,10 +68,14 @@ class Chat(QMainWindow):
         Below List contains all the contacts of the user(needs to be added dynamically) and their buttons need to be stored in the class
         '''
         self.contacts=["John Doe","Jane Doe","Jolly","Ram"]
+        self.contactsList=self.findChild(QVBoxLayout,"contactsList")
+        for contact in self.contacts:
+            self.contactsList.addWidget(own_push_button(contact))
         self.contactButtons=[]
         for contact in self.contacts:
             name=contact.replace(' ','')
             self.contactButtons.append(self.findChild(QPushButton,name))
+        
 
         '''
         all chat messages 
