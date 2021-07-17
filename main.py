@@ -1,14 +1,15 @@
-from fastapi import FastAPI
-from flask import render_template
+from flask import Flask
 
-app = FastAPI()
+app = Flask(__name__)
+app.config["DEBUG"] = True
 
-@app.get("/join")
+@app.route('/', methods=['GET'])
 def welcome():
     return "Hello"
 
-@app.get("/home")
+@app.route('/home', methods=['GET'])
 def home():
     return {"message": "hi"}
 
-
+if __name__ == "__main__":
+    app.run()
