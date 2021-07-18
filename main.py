@@ -1,15 +1,27 @@
-from flask import Flask
+# pip install fastapi, uvicorn[standard]
+# Run using cmd:  uvicorn main:app --reload
+# http://127.0.0.1:8000/docs for API docs (swagger.ui)
 
-app = Flask(__name__)
-app.config["DEBUG"] = True
+from fastapi import FastAPI
+from pydantic import BaseModel
 
-@app.route('/', methods=['GET'])
+app = FastAPI()
+
+# Model Structure - Class
+class ModelParams(BaseModel):
+    name : str
+
+@app.get('/')
 def welcome():
     return "Hello"
 
-@app.route('/home', methods=['GET'])
-def home():
-    return {"message": "hi"}
 
-if __name__ == "__main__":
-    app.run()
+#use any authentication to accept requests
+@app.get('/get-model')
+def getModel(): 
+    return {"message": "aggregated model"}
+
+@app.post("/send-model")
+def sendModel(model: ModelParams):
+    return {"message": model.name + ", cool!"}
+
