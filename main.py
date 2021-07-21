@@ -25,3 +25,7 @@ def getModel():
 def sendModel(model: ModelParams):
     return {"message": model.name + ", cool!"}
 
+
+@app.get('/aggregate')
+def aggregateModels(): 
+    return {"message": "aggregating model"}
