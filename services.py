@@ -35,15 +35,6 @@ def calculateScore(ipt):
 
     score = logReg.score(vectorizer.transform(x), y)
     print(score)
-    return "done"    
+    return score    
 
 
-# import requests
-# data = {'email':"test@email.com",
-#         'classes_': model.classes_,
-#         'coef_':model.coef_,
-#         'intercept_': model.intercept_,
-#         'n_iter_': model.n_iter_}
-
-# resp = requests.post(url = "https://project-insight-chat.herokuapp.com/get-score", data = data, headers={"Content-Type": "application/json; charset=utf-8"})
-# print("response:", resp.text)
