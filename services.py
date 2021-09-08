@@ -3,6 +3,7 @@ from datetime import datetime
 import pickle
 import pandas as pd
 from urllib.request import urlopen
+from sklearn.linear_model import LogisticRegression
 
 
 vectorizer = None
@@ -25,7 +26,7 @@ with urlopen(filename) as f:
 print("initialized model")
 
 def calculateScore(ipt):
-    logReg = model
+    logReg = LogisticRegression()
 
     logReg.classes_ = ipt.classes_
     logReg.coef_ = ipt.coef_
@@ -34,5 +35,15 @@ def calculateScore(ipt):
 
     score = logReg.score(vectorizer.transform(x), y)
     print(score)
-    return score    
-    
+    return "done"    
+
+
+# import requests
+# data = {'email':"test@email.com",
+#         'classes_': model.classes_,
+#         'coef_':model.coef_,
+#         'intercept_': model.intercept_,
+#         'n_iter_': model.n_iter_}
+
+# resp = requests.post(url = "https://project-insight-chat.herokuapp.com/get-score", data = data, headers={"Content-Type": "application/json; charset=utf-8"})
+# print("response:", resp.text)
