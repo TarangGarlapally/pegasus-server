@@ -4,12 +4,18 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import List
+import services
 
 app = FastAPI()
 
 # Model Structure - Class
 class ModelParams(BaseModel):
-    name : str
+    email: str
+    classes_: List[float]
+    coef_: List[List[float]]
+    intercept_: List[float]
+    n_iter_: List[int]
 
 @app.get('/')
 def welcome():
@@ -17,15 +23,6 @@ def welcome():
 
 
 #use any authentication to accept requests
-@app.get('/get-model')
-def getModel(): 
-    return {"message": "aggregated model"}
-
-@app.post("/send-model")
-def sendModel(model: ModelParams):
-    return {"message": model.name + ", cool!"}
-
-
-@app.get('/aggregate')
-def aggregateModels(): 
-    return {"message": "aggregating model"}
+@app.post('/get-score')
+def getModel(model: ModelParams): 
+    return services.calculateScore(model)
