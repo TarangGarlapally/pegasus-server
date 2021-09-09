@@ -4,7 +4,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
+from typing import List, Dict, Any
 import services
 
 app = FastAPI()
@@ -24,5 +24,5 @@ def welcome():
 
 #use any authentication to accept requests
 @app.post('/get-score')
-def getModel(model: ModelParams): 
+def getModel(model: Dict[Any, Any] = None): 
     return services.calculateScore(model)
