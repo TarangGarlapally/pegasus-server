@@ -25,4 +25,4 @@ def welcome():
 #use any authentication to accept requests
 @app.post('/get-score')
 def getModel(model: Dict[Any, Any] = None): 
-    return services.calculateScore(model)
+    return {"score": services.calculateScore(model)}
