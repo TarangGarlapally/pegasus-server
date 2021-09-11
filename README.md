@@ -8,4 +8,4 @@ Domain : Secured AI/ML
 To make contributions 
 First Fork the repository.
 
-endpoint - [project-insight-chat.herokuapp.com/docs](project-insight-chat.herokuapp.com/docs)
+endpoint - [https://project-insight-chat.herokuapp.com/docs](https://project-insight-chat.herokuapp.com/docs)
